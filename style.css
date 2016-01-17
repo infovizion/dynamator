@@ -1,0 +1,56 @@
+.qv-object-Dynamator div.qv-object-content-container {
+	overflow: auto;
+}
+.qv-object-Dynamator ul {
+	list-style: none;
+}
+.qv-object-Dynamator li.data {
+	padding: 4px;
+	border-bottom: 1px solid #ddd;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* frequency */
+.qv-object-Dynamator li.data span
+{
+	padding-left: 10px;
+	font-style: italic;
+	float:right;
+}
+/* colors when NOT in selection mode */
+
+.qv-object-Dynamator li.stateS, .qv-object-Dynamator li.stateL {
+	background-image: linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -o-linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -moz-linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -webkit-linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -ms-linear-gradient(top, #52cc52, #4dc04d);
+	color: #fff;
+}
+
+.qv-object-Dynamator li.stateX, .qv-object-Dynamator li.stateXL, .qv-object-Dynamator li.stateXS {
+	background-color: #A9A9A9;
+	color: #fff;
+}
+
+.qv-object-Dynamator li.stateA {
+	background-image: none;
+	background-color: #ddd;
+	color: #000;
+}
+/* colors when in selection mode */
+.qv-object-Dynamator.qv-selections-active li {
+	background-image: none;
+	background-color: #ddd;
+	color: #000;
+}
+
+.qv-object-Dynamator.qv-selections-active li.selected {
+	background-image: linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -o-linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -moz-linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -webkit-linear-gradient(top, #52cc52, #4dc04d);
+	background-image: -ms-linear-gradient(top, #52cc52, #4dc04d);
+	color: #fff;
+}
