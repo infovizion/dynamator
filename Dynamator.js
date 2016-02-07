@@ -102,7 +102,6 @@ define( ["jquery", "qlik","text!./style.css"], function ( $, qlik , cssContent )
 				initialize(thisLayout);
 			}
 			var expressionRow = thisLayout.qHyperCube.qDataPages[0].qMatrix[0];
-			// console.log({'expressionRow':expressionRow});
 			for (var id in patchesMap) {
 					(function(id){
 						if (patchesMap.hasOwnProperty(id)) {
