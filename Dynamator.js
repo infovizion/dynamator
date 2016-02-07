@@ -3,6 +3,27 @@ define( ["jquery", "qlik","text!./style.css"], function ( $, qlik , cssContent )
 	var initialized = false;
 	var patchesMap = {};
 
+
+	// function test() {
+	// 	var app = qlik.currApp();
+	// 	$( '.qv-object' ).each( function ( i, el ) {            
+	//     var s = angular.element( el ).scope();
+	//     if ( s.$$childHead && s.$$childHead.layout ) {
+ //        var layout = s.$$childHead.layout;
+	//       if (layout.visualization != "Dynamator" && layout.hasOwnProperty('qHyperCube')) {
+	//       	var objId = layout.qInfo.qId;
+	//       	app.getObject(objId).then(function(object) {
+	// 	      	object.getProperties().then(function(reply){
+	// 	 					console.log(reply);
+	// 					});
+	// 				});
+	// 			}
+	// 		}	
+	// 	});
+	// 	console.log(patchesMap);
+	// }	
+
+
 	function addToPatchesMap(objId, qPath, expressionIdx) {
 		var patchTemplate = [qPath, expressionIdx];
 		if (!patchesMap.hasOwnProperty(objId)) {
@@ -94,15 +115,15 @@ define( ["jquery", "qlik","text!./style.css"], function ( $, qlik , cssContent )
       var ownId = this.options.id;   
       var html = '';
 
-			// // $element.html( "<button id='dynamator-button'>Do</button>" );
-			// // var btn = $element.find("#dynamator-button");
-			// // btn.on('click', initialize);
+			// $element.html( "<button id='dynamator-button'>Test</button>" );
+			// var btn = $element.find("#dynamator-button");
+			// btn.on('click', test);
 			
 			if (!initialized) {
 				initialize(thisLayout);
 			}
 			var expressionRow = thisLayout.qHyperCube.qDataPages[0].qMatrix[0];
-			console.log({'expressionRow':expressionRow});
+			// console.log({'expressionRow':expressionRow});
 			for (var id in patchesMap) {
 					(function(id){
 						if (patchesMap.hasOwnProperty(id)) {
